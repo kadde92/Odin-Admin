@@ -19,6 +19,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+:root {
+    --sidebar-bgcolor: #4ade80;
+    --sidebar-color: #f5f5f5;
+}
+
 body {
     /* height: 100vh;
     width: 100%; */
@@ -50,19 +55,19 @@ body {
     /* grid-auto-flow: row; */
     grid-template-rows: 1fr 3fr 3fr;
     padding-bottom: 280px;
-    background-color:#4ade80;
-    color: #f5f5f5;
+    background-color: var(--sidebar-bgcolor);
+    color: var(--sidebar-color);
 }
 
 .sidebar button {
-    background-color:#4ade80;
-    color: #f5f5f5;
+    background-color: var(--sidebar-bgcolor);
+    color: var(--sidebar-color);
     cursor: pointer;
     border: none;
 }
 
-.sidebar ul li {
-    padding: 10px 90px;
+.sidebar ul li img {
+    /* padding: 10px 10px; */
 }
 
 .first-row, .second-row, .third-row {
