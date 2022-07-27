@@ -66,9 +66,9 @@ body {
     border: none;
 }
 
-.sidebar ul li img {
-    /* padding: 10px 10px; */
-}
+ /* .sidebar ul li img {
+     padding: 10px 10px;
+}  */
 
 .first-row, .second-row, .third-row {
     border: 1px solid black;
@@ -78,5 +78,12 @@ body {
     grid-column: 2 / span 1;
     grid-row: 2 / 5;
     border: 1px solid blue;
-
 }
+
+
+/* svg {
+    fill: var(--sidebar-color);
+    width: 100px;
+    height: 100px;
+    display: inline;
+} */
