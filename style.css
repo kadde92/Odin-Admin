@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,
+/* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -10,14 +10,21 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, svg {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    border:0;
 }
+
 
 :root {
     --sidebar-bgcolor: #4ade80;
@@ -34,14 +41,17 @@ body {
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: minmax(350px,1fr) 3fr;
+    grid-template-rows: minmax(180px, 1fr) 3fr;
 }
 
 .header {
     grid-column: 2 / span 1;
     grid-row: 1 / 2;
     border: 1px solid black;
+    display: grid;
+    grid-template-columns: minmax(60%, 2fr) 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 
@@ -49,13 +59,14 @@ body {
     grid-column: 2 / span 1;
     grid-row: 2 / 5;
     border: 1px solid blue;
+   
 }
 
 
 .sidebar {
     grid-column: 1 / span 1;
     grid-row: 1 / span 4;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     align-items: flex-start;
     /* justify-content:space-evenly; */
@@ -73,25 +84,16 @@ body {
     cursor: pointer;
     border: none;
     padding-left: 15px;
-    font-size: 24px;
-    padding-top: 8px;
+    font-size: 26px;
+    padding-top: 14px;
 }
-
- /* .sidebar ul li img {
-     padding: 10px 10px;
-}  */
-
-.first-row, .second-row, .third-row {
-    /* border: 1px solid black; */
-}
-
 
 
 svg {
     width: 26px;
     height: 26px;
     padding-left: 24px;
-    padding-top: 8px;
+    /* padding-top: 8px; */
 }
 
 svg path {
@@ -100,11 +102,18 @@ svg path {
 
 
 #heading-svg {
-    width: 36px;
-    height: 36px;
-    font-size: 36px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
 }
 
 .sidebar li :hover, #heading-svg:hover  {
     background-color: black;
 }
+
+/* .sidebar button, .sidebar svg {
+    display: inline-flex;
+    justify-content: baseline;
+    align-items: center;
+} */
+
