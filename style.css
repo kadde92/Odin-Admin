@@ -29,6 +29,7 @@ time, mark, audio, video, svg {
 :root {
     --sidebar-bgcolor: #4ade80;
     --sidebar-color: #f8fafc;
+    --searchbar-color: #d1d5db;
 }
 
 body {
@@ -54,6 +55,40 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
+
+#header-search {
+    width: 600px;
+    height: 25px;
+    background-color: var(--searchbar-color);
+    border-radius: 15px;
+}
+
+#header-svg path{
+    fill: black;
+    
+}
+
+.header .header-first label svg {
+   width: 31px;
+   height: 31px;
+   position: relative;
+   top: 12px;
+   padding-right: 8px;
+}
+
+input {
+    padding-left: 7px;
+    letter-spacing: 1px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.header-first {
+    padding-left: 20px;
+    padding-top: 15px;
+}
 
 .main-content {
     grid-column: 2 / span 1;
